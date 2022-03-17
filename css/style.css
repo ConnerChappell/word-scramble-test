@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Hind', sans-serif;
+    height: 100vh;
+    max-width: 480px;
+    margin: 0;
+}
+
+.progress-heading-stop {
+    font-size: 1rem;
+    margin: 1.5rem 0 0 0;
+}
+.progress-heading {
+    margin: 0 0 .5rem 0;
+}
+
+.progress-image {
+    width: 100%;
+}
+
+.current-progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #3a3a3a;
+    color: #fff;
+}
+.current-progress-container h2 {
+    font-weight: 400;
+    margin: 1rem 0 1rem 0;
+}
+.current-progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+}
+.current-progress-info div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 .75rem;
+    padding: .5rem 1rem;
+    width: 150px;
+    border-radius: 8px;
+    background-color: rgba(196, 196, 196, .19);
+}
+.current-progress-info div p {
+    margin: 0;
+    text-align: center;
+}
+.current-progress-number {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.start-exp-btn {
+    text-decoration: none;
+    padding: .75rem;
+    margin-bottom: 4rem;
+    width: 87.5%;
+    border-radius: 16px;
+    background-color: #1E8A49;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+
+
+/* Media Queries */
+@media only screen and (max-width: 330px) {
+    .current-progress-info div {
+        width: 60%;
+    }
+}
