@@ -10,9 +10,44 @@
 <body>
     
 
+    <div class="game-container">
+        <div class="word-guess-container">
+            <div class="back-to-map-container">
+                <a href="./word-scramble.html">
+                    <img src="../assets/arrow-left-solid.svg" alt="Back arrow">
+                    Map
+                </a>
+            </div>
+
+            <h1>Puzzle 1</h1>
+            <div class="word-row">
+                <div class="letter-tile"></div>
+                <div class="letter-tile"></div>
+                <div class="letter-tile"></div>
+                <div class="letter-tile"></div>
+                <div class="letter-tile"></div>
+                <button id="backspace-btn">X</button>
+            </div>
+        </div>
+
+        <div class="scrambled-letters-container">
+            <h2>Tap to unscramble the letters</h2>
+            <div class="scrambled-letters-row">
+                <button class="letter-button">R</button>
+                <button class="letter-button">H</button>
+                <button class="letter-button">E</button>
+                <button class="letter-button">K</button>
+                <button class="letter-button">I</button>
+            </div>
+
+            <button>Submit</button>
+            <button>Skip > </button>
+        </div>
+    </div>
+
 
     <!-- Modal -->
-    <div class="modal" id="welcome-modal">
+    <!-- <div class="modal" id="welcome-modal">
         <div class="modal-content">
             <img src="./assets/word-scramble.svg" alt="Word Scramble Graphic">
 
@@ -23,7 +58,7 @@
 
             <button id="close-modal-btn">Continue</button>
         </div>
-    </div>
+    </div> -->
 
     <script src="./js/word-scramble.js"></script>
 </body>
