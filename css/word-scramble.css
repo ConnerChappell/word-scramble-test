@@ -170,6 +170,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: end;
+    margin: 2rem 0;
     width: 100%;
 }
 #skip-word-btn {
