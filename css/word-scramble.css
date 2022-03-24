@@ -138,6 +138,7 @@ body {
     padding: 1rem 2rem 2rem 2rem;
 }
 .scrambled-letters-container h2 {
+    font-size: 20px;
     text-align: center;
     color: #000;
 }
