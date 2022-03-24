@@ -121,6 +121,9 @@ body {
     border-radius: 8px;
 }
 #backspace-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 52px;
     width: 56px;
     background-color: #f6b640;
@@ -130,6 +133,8 @@ body {
 }
 
 .scrambled-letters-container {
+    display: flex;
+    flex-direction: column;
     padding: 1rem 2rem 2rem 2rem;
 }
 .scrambled-letters-container h2 {
@@ -140,7 +145,7 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.letter-button {
+.letter-btn {
     height: 52px;
     width: 56px;
     background-color: #2f744a;
@@ -149,4 +154,33 @@ body {
     font-weight: 400;
     border: none;
     border-radius: 8px;
+}
+#submit-guess-btn {
+    margin: 2rem 0;
+    height: 50px;
+    background-color: #f6b640;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.skip-word-btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 100%;
+}
+#skip-word-btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 38px;
+    width: 120px;
+    background-color: #f6b640;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    padding: .5rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
