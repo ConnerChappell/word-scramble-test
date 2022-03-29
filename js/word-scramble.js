@@ -2,6 +2,12 @@
 const body = document.querySelector('body')
 const modal = document.querySelector('#welcome-modal')
 const closeModalBtn = document.querySelector('#close-modal-btn')
+const scrambledLettersRow = document.querySelector('.scrambled-letters-row')
+let letterBtn1 = document.querySelector('#letter-btn1')
+let letterBtn2 = document.querySelector('#letter-btn2')
+let letterBtn3 = document.querySelector('#letter-btn3')
+let letterBtn4 = document.querySelector('#letter-btn4')
+let letterBtn5 = document.querySelector('#letter-btn5')
 
 let words = ['hiker', 'moose', 'berry', 'picnic', 'trail']
 // array destructuring to assign variables for each word
@@ -24,16 +30,27 @@ const scrambleWord = (word) => {
     return word
 }
 let scrambledWord1 = scrambleWord(word1)
+let scrambledWord1Arr = scrambledWord1.split('')
 let scrambledWord2 = scrambleWord(word2)
 let scrambledWord3 = scrambleWord(word3)
 let scrambledWord4 = scrambleWord(word4)
 let scrambledWord5 = scrambleWord(word5)
 console.log(scrambledWord1)
-console.log(scrambledWord2)
-console.log(scrambledWord3)
-console.log(scrambledWord4)
-console.log(scrambledWord5)
+console.log(scrambledWord1Arr[0])
 
+// functions for displaying scrambled words
+const displayScrambledWord1 = () => {
+    letterBtn1.textContent = scrambledWord1Arr[0]
+    letterBtn2.textContent = scrambledWord1Arr[1]
+    letterBtn3.textContent = scrambledWord1Arr[2]
+    letterBtn4.textContent = scrambledWord1Arr[3]
+    letterBtn5.textContent = scrambledWord1Arr[4]
+}
+
+
+
+
+displayScrambledWord1()
 
 ///////////////////////// event listeners
 
