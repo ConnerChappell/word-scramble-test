@@ -4,6 +4,7 @@ const modal = document.querySelector('#welcome-modal')
 const closeModalBtn = document.querySelector('#close-modal-btn')
 const wordGuessRow = document.querySelector('.word-guess-row')
 const backspaceBtn = document.querySelector('#backspace-btn')
+const scrambledLettersContainer = document.querySelector('.scrambled-letters-container')
 const scrambledLettersRow = document.querySelector('.scrambled-letters-row')
 const submitGuessBtn = document.querySelector('#submit-guess-btn')
 const skipWordBtn = document.querySelector('#skip-word-btn')
@@ -97,7 +98,7 @@ const displayGuessedLetter5 = () => {
 ///////////////////////// event listeners
 
 // click event listeners for scrambled letter btns
-document.addEventListener('click', (event) => {
+scrambledLettersContainer.addEventListener('click', (event) => {
     // adds letters to wordGuessArr
     if (event.target.id === 'letter-btn1') {
         wordGuessArr.push(letterBtn1.textContent)
