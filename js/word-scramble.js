@@ -25,18 +25,25 @@ const scrambleWord = (word) => {
         return 0.5 - Math.random()
     })
 
-    // converts array back into a string and returns scrambled word
-    word = wordArr.join('')
-    return word
+    // converts array back into a string
+    let scrambledWord = wordArr.join('')
+
+    // if scrambled word = original word then it scrambles again and returns new scrambled word, else returns scrambled word
+    if (scrambledWord === word) {
+        let newScrambledWord = scrambleWord(scrambledWord)
+        return newScrambledWord
+    } else {
+        return scrambledWord
+    }
 }
 let scrambledWord1 = scrambleWord(word1)
 let scrambledWord1Arr = scrambledWord1.split('')
-let scrambledWord2 = scrambleWord(word2)
-let scrambledWord3 = scrambleWord(word3)
-let scrambledWord4 = scrambleWord(word4)
-let scrambledWord5 = scrambleWord(word5)
+// let scrambledWord2 = scrambleWord(word2)
+// let scrambledWord3 = scrambleWord(word3)
+// let scrambledWord4 = scrambleWord(word4)
+// let scrambledWord5 = scrambleWord(word5)
 console.log(scrambledWord1)
-console.log(scrambledWord1Arr[0])
+console.log(scrambledWord1Arr)
 
 // functions for displaying scrambled words
 const displayScrambledWord1 = () => {
