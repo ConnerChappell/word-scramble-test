@@ -110,7 +110,7 @@ body {
     text-align: center;
     margin-top: 3.5rem;
 }
-.word-row {
+.word-guess-row {
     display: flex;
     justify-content: space-between;
 }
@@ -147,6 +147,9 @@ body {
     justify-content: space-between;
 }
 .letter-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 52px;
     width: 56px;
     background-color: #2f744a;
@@ -154,6 +157,14 @@ body {
     text-transform: uppercase;
     font-size: 32px;
     font-weight: 400;
+    border: none;
+    border-radius: 8px;
+}
+.clicked-letter-btn {
+    height: 52px;
+    width: 56px;
+    background-color: #bcbbbb;
+    color: #bcbbbb;
     border: none;
     border-radius: 8px;
 }
