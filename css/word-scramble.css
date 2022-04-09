@@ -50,7 +50,7 @@ body {
     font-size: 24px;
     margin: 0;
 }
-.modal-content #close-modal-btn {
+.modal-content button {
     margin: 8rem 0 3rem 0;
     padding: 1.2rem;
     width: 87.5%;
