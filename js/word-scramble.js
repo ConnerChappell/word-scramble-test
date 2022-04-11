@@ -196,7 +196,7 @@ const checkWord1Letter1 = () => {
 ///////////////////////// event listeners
 
 // click event listeners for scrambled letter btns
-scrambledLettersContainer.addEventListener('click', (event) => {
+scrambledLettersRow.addEventListener('click', (event) => {
     // adds letters to wordGuessArr
     if (event.target.id === 'letter-btn1') {
         wordGuessArr.push(letterBtn1.textContent)
