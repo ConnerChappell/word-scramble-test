@@ -277,6 +277,97 @@ const checkWord1Letter1 = () => {
         letterBtn1.classList.add('letter-btn')
     }
 }
+// functions that check where letters are in scrambled word array 2
+const checkWord2Letter5 = () => {
+    if (wordGuessArr[4] === scrambledWord2Arr[4]) {
+        letterBtn5.classList.remove('clicked-letter-btn')
+        letterBtn5.classList.add('letter-btn')
+    } else if (wordGuessArr[4] === scrambledWord2Arr[3]) {
+        letterBtn4.classList.remove('clicked-letter-btn')
+        letterBtn4.classList.add('letter-btn')
+    } else if (wordGuessArr[4] === scrambledWord2Arr[2]) {
+        letterBtn3.classList.remove('clicked-letter-btn')
+        letterBtn3.classList.add('letter-btn')
+    } else if (wordGuessArr[4] === scrambledWord2Arr[1]) {
+        letterBtn2.classList.remove('clicked-letter-btn')
+        letterBtn2.classList.add('letter-btn')
+    } else if (wordGuessArr[4] === scrambledWord2Arr[0]) {
+        letterBtn1.classList.remove('clicked-letter-btn')
+        letterBtn1.classList.add('letter-btn')
+    }
+}
+const checkWord2Letter4 = () => {
+    if (wordGuessArr[3] === scrambledWord2Arr[4]) {
+        letterBtn5.classList.remove('clicked-letter-btn')
+        letterBtn5.classList.add('letter-btn')
+    } else if (wordGuessArr[3] === scrambledWord2Arr[3]) {
+        letterBtn4.classList.remove('clicked-letter-btn')
+        letterBtn4.classList.add('letter-btn')
+    } else if (wordGuessArr[3] === scrambledWord2Arr[2]) {
+        letterBtn3.classList.remove('clicked-letter-btn')
+        letterBtn3.classList.add('letter-btn')
+    } else if (wordGuessArr[3] === scrambledWord2Arr[1]) {
+        letterBtn2.classList.remove('clicked-letter-btn')
+        letterBtn2.classList.add('letter-btn')
+    } else if (wordGuessArr[3] === scrambledWord2Arr[0]) {
+        letterBtn1.classList.remove('clicked-letter-btn')
+        letterBtn1.classList.add('letter-btn')
+    }
+}
+const checkWord2Letter3 = () => {
+    if (wordGuessArr[2] === scrambledWord2Arr[4]) {
+        letterBtn5.classList.remove('clicked-letter-btn')
+        letterBtn5.classList.add('letter-btn')
+    } else if (wordGuessArr[2] === scrambledWord2Arr[3]) {
+        letterBtn4.classList.remove('clicked-letter-btn')
+        letterBtn4.classList.add('letter-btn')
+    } else if (wordGuessArr[2] === scrambledWord2Arr[2]) {
+        letterBtn3.classList.remove('clicked-letter-btn')
+        letterBtn3.classList.add('letter-btn')
+    } else if (wordGuessArr[2] === scrambledWord2Arr[1]) {
+        letterBtn2.classList.remove('clicked-letter-btn')
+        letterBtn2.classList.add('letter-btn')
+    } else if (wordGuessArr[2] === scrambledWord2Arr[0]) {
+        letterBtn1.classList.remove('clicked-letter-btn')
+        letterBtn1.classList.add('letter-btn')
+    }
+}
+const checkWord2Letter2 = () => {
+    if (wordGuessArr[1] === scrambledWord2Arr[4]) {
+        letterBtn5.classList.remove('clicked-letter-btn')
+        letterBtn5.classList.add('letter-btn')
+    } else if (wordGuessArr[1] === scrambledWord2Arr[3]) {
+        letterBtn4.classList.remove('clicked-letter-btn')
+        letterBtn4.classList.add('letter-btn')
+    } else if (wordGuessArr[1] === scrambledWord2Arr[2]) {
+        letterBtn3.classList.remove('clicked-letter-btn')
+        letterBtn3.classList.add('letter-btn')
+    } else if (wordGuessArr[1] === scrambledWord2Arr[1]) {
+        letterBtn2.classList.remove('clicked-letter-btn')
+        letterBtn2.classList.add('letter-btn')
+    } else if (wordGuessArr[1] === scrambledWord2Arr[0]) {
+        letterBtn1.classList.remove('clicked-letter-btn')
+        letterBtn1.classList.add('letter-btn')
+    }
+}
+const checkWord2Letter1 = () => {
+    if (wordGuessArr[0] === scrambledWord2Arr[4]) {
+        letterBtn5.classList.remove('clicked-letter-btn')
+        letterBtn5.classList.add('letter-btn')
+    } else if (wordGuessArr[0] === scrambledWord2Arr[3]) {
+        letterBtn4.classList.remove('clicked-letter-btn')
+        letterBtn4.classList.add('letter-btn')
+    } else if (wordGuessArr[0] === scrambledWord2Arr[2]) {
+        letterBtn3.classList.remove('clicked-letter-btn')
+        letterBtn3.classList.add('letter-btn')
+    } else if (wordGuessArr[0] === scrambledWord2Arr[1]) {
+        letterBtn2.classList.remove('clicked-letter-btn')
+        letterBtn2.classList.add('letter-btn')
+    } else if (wordGuessArr[0] === scrambledWord2Arr[0]) {
+        letterBtn1.classList.remove('clicked-letter-btn')
+        letterBtn1.classList.add('letter-btn')
+    }
+}
 
 // function that checks word 1 for backspace btn
 const backspaceBtnWord1Check = () => {
@@ -310,6 +401,45 @@ const backspaceBtnWord1Check = () => {
         console.log(wordGuessArr)
     } else if (wordGuessArr.length === 1) {
         checkWord1Letter1()
+        letterTile1.textContent = ''
+        letterTile1.classList.remove('letter-btn')
+        letterTile1.classList.add('letter-tile')
+        wordGuessArr.pop()
+        console.log(wordGuessArr)
+    }
+}
+// function that checks word 2 for backspace btn
+const backspaceBtnWord2Check = () => {
+    if (wordGuessArr.length === 5) {
+        checkWord2Letter5()
+        letterTile5.textContent = ''
+        letterTile5.classList.remove('letter-btn')
+        letterTile5.classList.add('letter-tile')
+        wordGuessArr.pop()
+        console.log(wordGuessArr)
+    } else if (wordGuessArr.length === 4) {
+        checkWord2Letter4()
+        letterTile4.textContent = ''
+        letterTile4.classList.remove('letter-btn')
+        letterTile4.classList.add('letter-tile')
+        wordGuessArr.pop()
+        console.log(wordGuessArr)
+    } else if (wordGuessArr.length === 3) {
+        checkWord2Letter3()
+        letterTile3.textContent = ''
+        letterTile3.classList.remove('letter-btn')
+        letterTile3.classList.add('letter-tile')
+        wordGuessArr.pop()
+        console.log(wordGuessArr)
+    } else if (wordGuessArr.length === 2) {
+        checkWord2Letter2()
+        letterTile2.textContent = ''
+        letterTile2.classList.remove('letter-btn')
+        letterTile2.classList.add('letter-tile')
+        wordGuessArr.pop()
+        console.log(wordGuessArr)
+    } else if (wordGuessArr.length === 1) {
+        checkWord2Letter1()
         letterTile1.textContent = ''
         letterTile1.classList.remove('letter-btn')
         letterTile1.classList.add('letter-tile')
@@ -366,8 +496,10 @@ scrambledLettersRow.addEventListener('click', (event) => {
 
 // click event listener for backspace btn
 backspaceBtn.addEventListener('click', () => {
-    if (letterBtn1.textContent == scrambledWord1Arr[0]) {
+    if (letterBtn1.textContent === scrambledWord1Arr[0] && letterBtn2.textContent === scrambledWord1Arr[1]) {
         backspaceBtnWord1Check()
+    } else if (letterBtn1.textContent === scrambledWord2Arr[0] && letterBtn2.textContent === scrambledWord2Arr[1]) {
+        backspaceBtnWord2Check()
     }
 })
 
@@ -401,7 +533,6 @@ submitGuessBtn.addEventListener('click', () => {
 })
 
 // click event listener for skipping
-// BUG weird behavior for skipping
 skipWordBtn.addEventListener('click', () => {
     if (letterBtn1.textContent === scrambledWord1Arr[0] && letterBtn2.textContent === scrambledWord1Arr[1]) {
         displayScrambledWord2()
