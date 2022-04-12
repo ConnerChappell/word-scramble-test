@@ -400,6 +400,22 @@ submitGuessBtn.addEventListener('click', () => {
     }
 })
 
+// click event listener for skipping
+skipWordBtn.addEventListener('click', () => {
+    if (letterBtn1.textContent == scrambledWord1Arr[0]) {
+        displayScrambledWord2()
+    } else if (letterBtn1.textContent == scrambledWord2Arr[0]) {
+        displayScrambledWord3()
+    } else if (letterBtn1.textContent == scrambledWord3Arr[0]) {
+        displayScrambledWord4()
+    } else if (letterBtn1.textContent == scrambledWord4Arr[0]) {
+        displayScrambledWord5()
+    } else {
+        scoreModal.style.display = 'block'
+        finalScore.textContent = `Final Score: ${score}/5`
+    }
+})
+
 // click event listeners that close modals
 closeModalBtn.addEventListener('click', () => {
     welcomeModal.classList.add('fade-out')
