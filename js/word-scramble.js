@@ -366,7 +366,7 @@ scrambledLettersRow.addEventListener('click', (event) => {
 
 // click event listener for backspace btn
 backspaceBtn.addEventListener('click', () => {
-    if (letterBtn1.textContent = scrambledWord1Arr[0]) {
+    if (letterBtn1.textContent == scrambledWord1Arr[0]) {
         backspaceBtnWord1Check()
     }
 })
@@ -403,15 +403,15 @@ submitGuessBtn.addEventListener('click', () => {
 // click event listener for skipping
 // BUG weird behavior for skipping
 skipWordBtn.addEventListener('click', () => {
-    if (letterBtn1.textContent == scrambledWord1Arr[0]) {
+    if (letterBtn1.textContent === scrambledWord1Arr[0] && letterBtn2.textContent === scrambledWord1Arr[1]) {
         displayScrambledWord2()
-    } else if (letterBtn1.textContent == scrambledWord2Arr[0]) {
+    } else if (letterBtn1.textContent === scrambledWord2Arr[0] && letterBtn2.textContent === scrambledWord2Arr[1]) {
         displayScrambledWord3()
-    } else if (letterBtn1.textContent == scrambledWord3Arr[0]) {
+    } else if (letterBtn1.textContent === scrambledWord3Arr[0] && letterBtn2.textContent === scrambledWord3Arr[1]) {
         displayScrambledWord4()
-    } else if (letterBtn1.textContent == scrambledWord4Arr[0]) {
+    } else if (letterBtn1.textContent === scrambledWord4Arr[0] && letterBtn2.textContent === scrambledWord4Arr[1]) {
         displayScrambledWord5()
-    } else {
+    } else if (letterBtn1.textContent === scrambledWord5Arr[0] && letterBtn2.textContent === scrambledWord5Arr[1]) {
         scoreModal.style.display = 'block'
         finalScore.textContent = `Final Score: ${score}/5`
     }
