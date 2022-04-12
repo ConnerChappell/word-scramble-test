@@ -1,5 +1,6 @@
 ///////////////////////// selectors
 const body = document.querySelector('body')
+const puzzleNumber = document.querySelector('#puzzle-number')
 // modals
 const welcomeModal = document.querySelector('#welcome-modal')
 const closeModalBtn = document.querySelector('#close-modal-btn')
@@ -7,6 +8,9 @@ const successModal = document.querySelector('#success-modal')
 const nextWordBtn = document.querySelector('#next-word-btn')
 const tryAgainModal = document.querySelector('#try-again-modal')
 const tryAgainBtn = document.querySelector('#try-again-btn')
+const scoreModal = document.querySelector('#score-modal')
+const finalScore = document.querySelector('#final-score')
+const refreshBtn = document.querySelector('#refresh-btn')
 // word guess row
 const wordGuessRow = document.querySelector('.word-guess-row')
 const backspaceBtn = document.querySelector('#backspace-btn')
@@ -15,7 +19,7 @@ const scrambledLettersContainer = document.querySelector('.scrambled-letters-con
 const scrambledLettersRow = document.querySelector('.scrambled-letters-row')
 const submitGuessBtn = document.querySelector('#submit-guess-btn')
 const skipWordBtn = document.querySelector('#skip-word-btn')
-
+// letter tiles and buttons
 let letterTile1 = document.querySelector('#letter-tile1')
 let letterTile2 = document.querySelector('#letter-tile2')
 let letterTile3 = document.querySelector('#letter-tile3')
@@ -27,11 +31,12 @@ let letterBtn3 = document.querySelector('#letter-btn3')
 let letterBtn4 = document.querySelector('#letter-btn4')
 let letterBtn5 = document.querySelector('#letter-btn5')
 
-let words = ['hiker', 'moose', 'berry', 'picnic', 'trail']
+let words = ['hiker', 'ridge', 'berry', 'guide', 'trail']
 // array destructuring to assign variables for each word
 let [word1, word2, word3, word4, word5] = words
 
 let wordGuessArr = []
+let score = 0
 
 ///////////////////////// functions
 
@@ -58,11 +63,47 @@ const scrambleWord = (word) => {
 }
 let scrambledWord1 = scrambleWord(word1)
 let scrambledWord1Arr = scrambledWord1.split('')
-// let scrambledWord2 = scrambleWord(word2)
-// let scrambledWord3 = scrambleWord(word3)
-// let scrambledWord4 = scrambleWord(word4)
-// let scrambledWord5 = scrambleWord(word5)
-console.log(scrambledWord1Arr)
+let scrambledWord2 = scrambleWord(word2)
+let scrambledWord2Arr = scrambledWord2.split('')
+let scrambledWord3 = scrambleWord(word3)
+let scrambledWord3Arr = scrambledWord3.split('')
+let scrambledWord4 = scrambleWord(word4)
+let scrambledWord4Arr = scrambledWord4.split('')
+let scrambledWord5 = scrambleWord(word5)
+let scrambledWord5Arr = scrambledWord5.split('')
+
+// function that resets guessed word array
+const resetWordGuessArr = () => {
+    letterTile5.textContent = ''
+    letterTile5.classList.remove('letter-btn')
+    letterTile5.classList.add('letter-tile')
+    letterTile4.textContent = ''
+    letterTile4.classList.remove('letter-btn')
+    letterTile4.classList.add('letter-tile')
+    letterTile3.textContent = ''
+    letterTile3.classList.remove('letter-btn')
+    letterTile3.classList.add('letter-tile')
+    letterTile2.textContent = ''
+    letterTile2.classList.remove('letter-btn')
+    letterTile2.classList.add('letter-tile')
+    letterTile1.textContent = ''
+    letterTile1.classList.remove('letter-btn')
+    letterTile1.classList.add('letter-tile')
+}
+
+// function that resets clicked letter btn to letter btn
+const resetLetterBtns = () => {
+    letterBtn1.classList.remove('clicked-letter-btn')
+    letterBtn1.classList.add('letter-btn')
+    letterBtn2.classList.remove('clicked-letter-btn')
+    letterBtn2.classList.add('letter-btn')
+    letterBtn3.classList.remove('clicked-letter-btn')
+    letterBtn3.classList.add('letter-btn')
+    letterBtn4.classList.remove('clicked-letter-btn')
+    letterBtn4.classList.add('letter-btn')
+    letterBtn5.classList.remove('clicked-letter-btn')
+    letterBtn5.classList.add('letter-btn')
+}
 
 // functions for displaying scrambled words
 const displayScrambledWord1 = () => {
@@ -73,6 +114,50 @@ const displayScrambledWord1 = () => {
     letterBtn5.textContent = scrambledWord1Arr[4]
 }
 displayScrambledWord1()
+const displayScrambledWord2 = () => {
+    puzzleNumber.textContent = 'Puzzle 2'
+    wordGuessArr.splice(0, wordGuessArr.length)
+    resetWordGuessArr()
+    resetLetterBtns()
+    letterBtn1.textContent = scrambledWord2Arr[0]
+    letterBtn2.textContent = scrambledWord2Arr[1]
+    letterBtn3.textContent = scrambledWord2Arr[2]
+    letterBtn4.textContent = scrambledWord2Arr[3]
+    letterBtn5.textContent = scrambledWord2Arr[4]
+}
+const displayScrambledWord3 = () => {
+    puzzleNumber.textContent = 'Puzzle 3'
+    wordGuessArr.splice(0, wordGuessArr.length)
+    resetWordGuessArr()
+    resetLetterBtns()
+    letterBtn1.textContent = scrambledWord3Arr[0]
+    letterBtn2.textContent = scrambledWord3Arr[1]
+    letterBtn3.textContent = scrambledWord3Arr[2]
+    letterBtn4.textContent = scrambledWord3Arr[3]
+    letterBtn5.textContent = scrambledWord3Arr[4]
+}
+const displayScrambledWord4 = () => {
+    puzzleNumber.textContent = 'Puzzle 4'
+    wordGuessArr.splice(0, wordGuessArr.length)
+    resetWordGuessArr()
+    resetLetterBtns()
+    letterBtn1.textContent = scrambledWord4Arr[0]
+    letterBtn2.textContent = scrambledWord4Arr[1]
+    letterBtn3.textContent = scrambledWord4Arr[2]
+    letterBtn4.textContent = scrambledWord4Arr[3]
+    letterBtn5.textContent = scrambledWord4Arr[4]
+}
+const displayScrambledWord5 = () => {
+    puzzleNumber.textContent = 'Puzzle 5'
+    wordGuessArr.splice(0, wordGuessArr.length)
+    resetWordGuessArr()
+    resetLetterBtns()
+    letterBtn1.textContent = scrambledWord5Arr[0]
+    letterBtn2.textContent = scrambledWord5Arr[1]
+    letterBtn3.textContent = scrambledWord5Arr[2]
+    letterBtn4.textContent = scrambledWord5Arr[3]
+    letterBtn5.textContent = scrambledWord5Arr[4]
+}
 
 // functions that displays the guessed letters
 const displayGuessedLetter1 = () => {
@@ -193,6 +278,46 @@ const checkWord1Letter1 = () => {
     }
 }
 
+// function that checks word 1 for backspace btn
+const backspaceBtnWord1Check = () => {
+    if (wordGuessArr.length === 5) {
+        checkWord1Letter5()
+        letterTile5.textContent = ''
+        letterTile5.classList.remove('letter-btn')
+        letterTile5.classList.add('letter-tile')
+        wordGuessArr.pop()
+        console.log(wordGuessArr)
+    } else if (wordGuessArr.length === 4) {
+        checkWord1Letter4()
+        letterTile4.textContent = ''
+        letterTile4.classList.remove('letter-btn')
+        letterTile4.classList.add('letter-tile')
+        wordGuessArr.pop()
+        console.log(wordGuessArr)
+    } else if (wordGuessArr.length === 3) {
+        checkWord1Letter3()
+        letterTile3.textContent = ''
+        letterTile3.classList.remove('letter-btn')
+        letterTile3.classList.add('letter-tile')
+        wordGuessArr.pop()
+        console.log(wordGuessArr)
+    } else if (wordGuessArr.length === 2) {
+        checkWord1Letter2()
+        letterTile2.textContent = ''
+        letterTile2.classList.remove('letter-btn')
+        letterTile2.classList.add('letter-tile')
+        wordGuessArr.pop()
+        console.log(wordGuessArr)
+    } else if (wordGuessArr.length === 1) {
+        checkWord1Letter1()
+        letterTile1.textContent = ''
+        letterTile1.classList.remove('letter-btn')
+        letterTile1.classList.add('letter-tile')
+        wordGuessArr.pop()
+        console.log(wordGuessArr)
+    }
+}
+
 ///////////////////////// event listeners
 
 // click event listeners for scrambled letter btns
@@ -241,50 +366,35 @@ scrambledLettersRow.addEventListener('click', (event) => {
 
 // click event listener for backspace btn
 backspaceBtn.addEventListener('click', () => {
-    // checks where letter is in scrambled array and displays it then deletes off of word guess array
-    if (wordGuessArr.length === 5) {
-        checkWord1Letter5()
-        letterTile5.textContent = ''
-        letterTile5.classList.remove('letter-btn')
-        letterTile5.classList.add('letter-tile')
-        wordGuessArr.pop()
-        console.log(wordGuessArr)
-    } else if (wordGuessArr.length === 4) {
-        checkWord1Letter4()
-        letterTile4.textContent = ''
-        letterTile4.classList.remove('letter-btn')
-        letterTile4.classList.add('letter-tile')
-        wordGuessArr.pop()
-        console.log(wordGuessArr)
-    } else if (wordGuessArr.length === 3) {
-        checkWord1Letter3()
-        letterTile3.textContent = ''
-        letterTile3.classList.remove('letter-btn')
-        letterTile3.classList.add('letter-tile')
-        wordGuessArr.pop()
-        console.log(wordGuessArr)
-    } else if (wordGuessArr.length === 2) {
-        checkWord1Letter2()
-        letterTile2.textContent = ''
-        letterTile2.classList.remove('letter-btn')
-        letterTile2.classList.add('letter-tile')
-        wordGuessArr.pop()
-        console.log(wordGuessArr)
-    } else if (wordGuessArr.length === 1) {
-        checkWord1Letter1()
-        letterTile1.textContent = ''
-        letterTile1.classList.remove('letter-btn')
-        letterTile1.classList.add('letter-tile')
-        wordGuessArr.pop()
-        console.log(wordGuessArr)
-    } 
+    if (letterBtn1.textContent = scrambledWord1Arr[0]) {
+        backspaceBtnWord1Check()
+    }
 })
 
 // click event listener for submitting guess
 submitGuessBtn.addEventListener('click', () => {
     let guessedWord = wordGuessArr.join('')
+
     if (guessedWord === word1) {
+        score++
         successModal.style.display = 'block'
+        displayScrambledWord2()
+    } else if (guessedWord === word2) {
+        score++
+        successModal.style.display = 'block'
+        displayScrambledWord3()
+    } else if (guessedWord === word3) {
+        score++
+        successModal.style.display = 'block'
+        displayScrambledWord4()
+    } else if (guessedWord === word4) {
+        score++
+        successModal.style.display = 'block'
+        displayScrambledWord5()
+    } else if (guessedWord === word5) {
+        score++
+        scoreModal.style.display = 'block'
+        finalScore.textContent = `Final Score: ${score}/5`
     } else {
         tryAgainModal.style.display = 'block'
     }
@@ -314,4 +424,9 @@ tryAgainBtn.addEventListener('click', () => {
         tryAgainModal.style.display = 'none'
         tryAgainModal.classList.remove('fade-out')
     }, 300)
+})
+
+// click event listener that refreshes page and game
+refreshBtn.addEventListener('click', () => {
+    window.location.reload(true)
 })

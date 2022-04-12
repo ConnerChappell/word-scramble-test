@@ -19,7 +19,7 @@
                 </a>
             </div>
 
-            <h1>Puzzle 1</h1>
+            <h1 id="puzzle-number">Puzzle 1</h1>
             <div class="word-guess-row">
                 <div class="letter-tile" id="letter-tile1"></div>
                 <div class="letter-tile" id="letter-tile2"></div>
@@ -93,6 +93,20 @@
             </div>
 
             <button id="try-again-btn">Try Again</button>
+        </div>
+    </div>
+
+    <!-- Score Modal -->
+    <div class="modal" id="score-modal">
+        <div class="modal-content">
+            <img src="./assets/thumbs-down.svg" alt="Thumbs Down Graphic">
+
+            <div class="modal-content-text">
+                <h1 id="final-score"></h1>
+                <p>Thank you for playing! Feel free to click the button below and try again!</p>
+            </div>
+
+            <button id="refresh-btn">Play Again</button>
         </div>
     </div>
 
