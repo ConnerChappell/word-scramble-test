@@ -401,6 +401,7 @@ submitGuessBtn.addEventListener('click', () => {
 })
 
 // click event listener for skipping
+// BUG weird behavior for skipping
 skipWordBtn.addEventListener('click', () => {
     if (letterBtn1.textContent == scrambledWord1Arr[0]) {
         displayScrambledWord2()
