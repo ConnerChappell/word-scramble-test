@@ -930,15 +930,15 @@ submitGuessBtn.addEventListener('click', () => {
 
 // click event listener for skipping
 skipWordBtn.addEventListener('click', () => {
-    if (letterBtn1.textContent === scrambledWord1Arr[0] && letterBtn2.textContent === scrambledWord1Arr[1]) {
+    if (letterBtn1.textContent === scrambledWord1Arr[0] && letterBtn2.textContent === scrambledWord1Arr[1] && letterBtn3.textContent === scrambledWord1Arr[2] && letterBtn4.textContent === scrambledWord1Arr[3] && letterBtn5.textContent === scrambledWord1Arr[4]) {
         displayScrambledWord2()
-    } else if (letterBtn1.textContent === scrambledWord2Arr[0] && letterBtn2.textContent === scrambledWord2Arr[1]) {
+    } else if (letterBtn1.textContent === scrambledWord2Arr[0] && letterBtn2.textContent === scrambledWord2Arr[1] && letterBtn3.textContent === scrambledWord2Arr[2] && letterBtn4.textContent === scrambledWord2Arr[3] && letterBtn5.textContent === scrambledWord2Arr[4]) {
         displayScrambledWord3()
-    } else if (letterBtn1.textContent === scrambledWord3Arr[0] && letterBtn2.textContent === scrambledWord3Arr[1]) {
+    } else if (letterBtn1.textContent === scrambledWord3Arr[0] && letterBtn2.textContent === scrambledWord3Arr[1] && letterBtn3.textContent === scrambledWord3Arr[2] && letterBtn4.textContent === scrambledWord3Arr[3] && letterBtn5.textContent === scrambledWord3Arr[4]) {
         displayScrambledWord4()
-    } else if (letterBtn1.textContent === scrambledWord4Arr[0] && letterBtn2.textContent === scrambledWord4Arr[1]) {
+    } else if (letterBtn1.textContent === scrambledWord4Arr[0] && letterBtn2.textContent === scrambledWord4Arr[1] && letterBtn3.textContent === scrambledWord4Arr[2] && letterBtn4.textContent === scrambledWord4Arr[3] && letterBtn5.textContent === scrambledWord4Arr[4]) {
         displayScrambledWord5()
-    } else if (letterBtn1.textContent === scrambledWord5Arr[0] && letterBtn2.textContent === scrambledWord5Arr[1]) {
+    } else if (letterBtn1.textContent === scrambledWord5Arr[0] && letterBtn2.textContent === scrambledWord5Arr[1] && letterBtn3.textContent === scrambledWord5Arr[2] && letterBtn4.textContent === scrambledWord5Arr[3] && letterBtn5.textContent === scrambledWord5Arr[4]) {
         scoreModal.style.display = 'block'
         finalScore.textContent = `Final Score: ${score}/5`
     }
