@@ -31,7 +31,7 @@ let letterBtn3 = document.querySelector('#letter-btn3')
 let letterBtn4 = document.querySelector('#letter-btn4')
 let letterBtn5 = document.querySelector('#letter-btn5')
 
-let words = ['hiker', 'blaze', 'river', 'guide', 'trail']
+let words = ['hiker', 'blaze', 'plant', 'guide', 'trail']
 // array destructuring to assign variables for each word
 let [word1, word2, word3, word4, word5] = words
 
